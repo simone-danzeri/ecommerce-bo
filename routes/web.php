@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ProjectController;
+use App\Http\Controllers\Admin\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +34,7 @@ Route::middleware(['auth', 'verified'])
     Route::resource('projects', ProjectController::class)->parameters([
         'projects' => 'project:slug'
     ]);
+    Route::resource('products', ProductController::class);
 });
 
 Route::middleware('auth')->group(function () {
