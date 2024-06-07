@@ -23,7 +23,9 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call([
-            ProjectsTableSeeder::class,
+            EmployeesTableSeeder::class,
+            OrdersTableSeeder::class,
+            ProductsTableSeeder::class,
         ]);
     }
 }
